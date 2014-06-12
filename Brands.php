@@ -12,6 +12,8 @@
 
 namespace Brands;
 
+use Propel\Runtime\Connection\ConnectionInterface;
+use Thelia\Install\Database;
 use Thelia\Module\BaseModule;
 
 class Brands extends BaseModule
@@ -22,4 +24,10 @@ class Brands extends BaseModule
      *
      * Have fun !
      */
+    public function postActivation(ConnectionInterface $con = null)
+    {
+        $database = new Database($con->getWrappedConnection());
+
+        $database->insertSql(null, array(__DIR__ . '/Config/thelia.sql'));
+    }
 }

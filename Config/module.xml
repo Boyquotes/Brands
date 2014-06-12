@@ -2,15 +2,15 @@
 <module>
     <fullnamespace>Brands\Brands</fullnamespace>
     <descriptive locale="en_US">
-        <title>Automatically generated module - please update module.xml file</title>
+        <title>Manage brands</title>
     </descriptive>
     <descriptive locale="fr_FR">
-        <title>Module généré autromatiquement - editez le fichier module.xml</title>
+        <title>Gestion des marques</title>
     </descriptive>
     <version></version>
     <author>
-        <name></name>
-        <email></email>
+        <name>Flavien Grenier - Nicolas Villa</name>
+        <email>contact@libre-shop.com</email>
     </author>
     <type>classic</type>
     <thelia>2.0.0</thelia>
