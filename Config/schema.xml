@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database defaultIdMethod="native" name="thelia" namespace="Brands\Model">
     <table name="brand">
-        <column name="id" primaryKey="true" required="true" type="INTEGER" />
+        <column name="id" primaryKey="true" type="INTEGER" required="true" autoIncrement="true" />
         <column name="nom" type="VARCHAR" required="true" />
         <column name="description" type="LONGVARCHAR" required="true" />
-        <foreign-key foreignTable="product" name="id">
-            <reference foreign="id" local="id" />
+        <foreign-key foreignTable="product"  name="fk_product_brands_id">
+            <reference local="id" foreign="id" />
         </foreign-key>
     </table>
     <external-schema filename="local/config/schema.xml" referenceOnly="true" />

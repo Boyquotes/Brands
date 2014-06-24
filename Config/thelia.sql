@@ -11,11 +11,11 @@ DROP TABLE IF EXISTS `brand`;
 
 CREATE TABLE `brand`
 (
-    `id` INTEGER NOT NULL,
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
     `nom` VARCHAR(255) NOT NULL,
     `description` TEXT NOT NULL,
     PRIMARY KEY (`id`),
-    CONSTRAINT `id`
+    CONSTRAINT `fk_product_brands_id`
         FOREIGN KEY (`id`)
         REFERENCES `product` (`id`)
 ) ENGINE=InnoDB;

@@ -1,0 +1,12 @@
+{* Calc tab selection *}
+{assign var="tab" value="0"}
+{if isset($smarty.get.current_tab)}
+    {if $smarty.get.current_tab eq "configure_sandbox"}
+        {assign var="tab" value="1"}
+    {/if}
+{/if}
+<div class="general-block-decorator">
+    <div class="col-md-12">
+TEST
+    </div>
+</div>
